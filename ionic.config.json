@@ -1,0 +1,7 @@
+{
+  "name": "quick-lists",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
