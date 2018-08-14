@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, Platform} from 'ionic-angular';
+
+import { ChecklistModel } from '../../models/checklist-model';
+import { DataProvider } from '../../providers/data/data';
+import { Keyboard } from '@ionic-native/keyboard'
 
 @IonicPage()
 @Component({
@@ -8,8 +12,34 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  checklists: ChecklistModel[] = [];
 
+  constructor(public navCtrl: NavController, public dataService: DataProvider, public alertCtrl: AlertController, public platform: Platform, keyboard: Keyboard) {
+
+  }
+
+  ionViewDidLoad() {
+
+  }
+
+  addChecklist(): void {
+
+  }
+
+  renameChecklist(checklist): void {
+
+  }
+
+  viewChecklist(checklist): void {
+
+  }
+
+  removeChecklist(checklist): void {
+
+  }
+
+  save(): void {
+    
   }
 
 }
