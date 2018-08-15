@@ -14,7 +14,7 @@ export class HomePage {
 
   checklists: ChecklistModel[] = [];
 
-  constructor(public navCtrl: NavController, public dataService: DataProvider, public alertCtrl: AlertController, public platform: Platform, keyboard: Keyboard) {
+  constructor(public navCtrl: NavController, public dataService: DataProvider, public alertCtrl: AlertController, public platform: Platform, public keyboard: Keyboard) {
 
   }
 
@@ -107,7 +107,8 @@ export class HomePage {
   }
 
   save(): void {
-
+    this.keyboard.close();
+    this.dataService.save(this.checklists);
   }
 
 }
