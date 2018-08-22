@@ -5,6 +5,7 @@ import { ChecklistModel } from '../../models/checklist-model';
 import { DataProvider } from '../../providers/data/data';
 import { Keyboard } from '@ionic-native/keyboard';
 import { Storage } from '@ionic/storage';
+import * as moment from 'moment';
 
 @IonicPage()
 @Component({
@@ -53,6 +54,9 @@ export class HomePage {
         }
       });
     });
+
+    let now = moment().format('LLLL');
+    console.log(now)
   }
 
   addChecklist(): void {
